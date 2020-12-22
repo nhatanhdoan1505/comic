@@ -1,0 +1,9 @@
+.ComicItem img{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+img:hover {
+    border: 1px solid purple;
+}

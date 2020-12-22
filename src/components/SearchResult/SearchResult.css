@@ -1,0 +1,11 @@
+.SearchResult{
+    height: 95%;
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.col{
+    text-align: center;
+}
