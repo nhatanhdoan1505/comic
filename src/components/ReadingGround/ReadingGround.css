@@ -1,0 +1,35 @@
+.ReadingGround{
+    width: 90%;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.DropChapter{
+    width: 500px;
+}
+
+.Toggle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.ToggleValue{
+    margin-top: 15px;
+    height: 300px;
+    overflow: scroll;
+    position: fixed;
+    background-color: white;
+    width: 32%;
+    padding: 15px;
+}

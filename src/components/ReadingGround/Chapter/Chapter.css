@@ -1,0 +1,9 @@
+.Chapter{
+    cursor: pointer;
+    border-bottom: 1px solid red;
+}
+
+.Chapter p:hover{
+    border: 1px solid black;
+    background-color: white;
+}

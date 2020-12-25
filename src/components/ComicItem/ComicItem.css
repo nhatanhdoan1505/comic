@@ -2,8 +2,60 @@
     border: 1px solid black;
     margin-bottom: 10px;
     width: 200px;
+    height: 300px;
 }
 
-img:hover {
-    border: 1px solid purple;
+.ComicItem h6 {
+    max-width: 200px;
+}
+
+.ComicItem {
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.Wraper{
+    position: relative;
+}
+
+.Wraper:hover{
+    filter: blur(3px);
+}
+
+.Wraper:hover + .ButtonGroup{
+    display: block;
+}
+
+.ButtonGroup{
+    position: absolute;
+    top: 25%;
+    right: 35%;
+    display: none;
+}
+
+.ButtonGroup button{
+    margin-top: 5px;
+}
+
+.ButtonGroup:hover {
+    display: block;
+}
+
+.ButtonGroup:hover + .Wraper{
+    filter: blur(3px); 
+}
+
+.Read{
+    background-color: 	#5cb85c;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.Download{
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px;
 }

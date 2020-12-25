@@ -3,6 +3,7 @@ import Navigation from './components/Navigation/Navigation';
 import React, { useState } from 'react';
 import urlencode from 'urlencode';
 import axios from './axios/axios';
+import Helmet from 'react-helmet';
 import SearchResult from './components/SearchResult/SearchResult';
 import ReadingComic from './components/ReadingComic/ReadingComic';
 
@@ -110,6 +111,7 @@ function App() {
     }
   ]
 
+
   const searchHandler = () => {
     setLoading(true);
     axios.post('/search', {'url': `${url}${keyWord}`})
@@ -128,15 +130,18 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Main">
+      <Helmet>
+        <style>{'body{overflow-x: scroll; overflow-y: hidden}'}</style>
+      </Helmet>
         <Navigation 
           logo="The World of Comic"
           setKeyWordHandler={setKeyWordHandler}
-          searchHandler={searchHandler}/> 
-        {/* <SearchResult 
+          searchHandler={searchHandler}/>
+        <div className="Main"> 
+        <SearchResult 
           comics={comics}
-          loading={loading}/> */}
-        <ReadingComic images={images}/>
+          loading={loading}/>
+          {/* <ReadingComic images={images}/> */}
       </div>
     </div>
   );

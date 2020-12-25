@@ -1,0 +1,39 @@
+.Modal{
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 99%;
+    height: 99%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 10px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+
+/* @media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+} */
+
+.CancleButton{
+    position: absolute;
+    font-size: 1rem;
+    top: 0;
+    right: 5px;
+}
+
+.CancleButton:hover{
+    cursor: pointer;
+}
