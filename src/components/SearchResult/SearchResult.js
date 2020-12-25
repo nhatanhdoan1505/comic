@@ -18,7 +18,7 @@ function SearchResult(props) {
 
     return(
         <div className="SearchResult">
-            {props.loading ? <LadderLoading size="large"/> : ""}
+            {props.loading ?<div className="Loading"> <LadderLoading size="large"/> </div> : ""}
             <Row
                 lg={2}>
                     {conmicsResult}

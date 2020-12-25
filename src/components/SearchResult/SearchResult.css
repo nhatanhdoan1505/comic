@@ -4,8 +4,18 @@
     margin: 0px auto;
     margin-bottom: 0px;
     padding: 20px;
+    position: relative;
+    overflow: auto;
 }
 
 .col{
     text-align: center;
+}
+
+.Loading{
+    position: fixed;
+    z-index: 900;
+    top: 40%;
+    left: 55%;
+    box-shadow: 0 8px 6px -6px black;
 }

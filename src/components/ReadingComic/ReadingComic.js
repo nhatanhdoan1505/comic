@@ -4,7 +4,7 @@ import './ReadingComic.css';
 function ReadingComic(props) {
     const images = props.images;
     const display = images.map(image => {
-        return <img src={image.src}/>
+        return <img src={image.src} alt={image.alt} key={image.src}/>
     })
 
     return (

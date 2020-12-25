@@ -21,7 +21,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    text-align: center;
     border: 1px solid black;
+}
+
+.Toggle span {
+    overflow: auto;
 }
 
 .ToggleValue{
@@ -32,4 +37,64 @@
     background-color: white;
     width: 32%;
     padding: 15px;
+    z-index: 500;
+    box-shadow: 3px 3px 5px 6px #ccc; 
+}
+
+@media(max-width: 1380px){
+    .ToggleValue{
+        width: 35%;
+    }
+}
+
+@media(max-width: 1352px){
+    .ToggleValue{
+        width: 40%;
+    }
+}
+
+@media(max-width: 1090px){
+    .ToggleValue{
+        width: 50%;
+    }
+}
+
+@media(max-width: 880px){
+    .ToggleValue{
+        width: 55%;
+    }
+}
+
+@media(max-width: 805px){
+    .ToggleValue{
+        width: 60%;
+    }
+}
+
+@media(max-width: 728px){
+    .ToggleValue{
+        width: 70%;
+    }
+}
+
+@media(max-width: 624px){
+    .ToggleValue{
+        width: 75%;
+    }
+}
+
+@media(max-width: 585px){
+    .ToggleValue{
+        width: 80%;
+    }
+}
+
+@media(max-width: 568px){
+    .ToggleValue{
+        width: 80%;
+    }
+    .DropChapter{
+        width: 90%;
+        left: 20px;
+    }
 }

@@ -1,12 +1,10 @@
 .App{
   font-family: inherit;
-  overflow-x: auto;
 }
 
 .Main{
   width: 100%;
   height: 100vh;
-  overflow-x: auto;
 }
 
 ::-webkit-scrollbar {

@@ -30,3 +30,12 @@
     font-family: 'Montserrat', sans-serif;
     background-color: transparent;
 }
+
+@media (max-width: 1060px){
+    .Logo{
+        display: none;
+    }
+    .Navigation{
+        justify-content: center;
+    }
+}
