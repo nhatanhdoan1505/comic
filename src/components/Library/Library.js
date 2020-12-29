@@ -1,16 +1,15 @@
 import React from 'react';
-import './SearchResult.css';
 import { Row } from 'react-bootstrap';
-import ComicItem from '../ComicItem/ComicItem';
+import LibraryItem from '../LibraryItem/LibraryItem';
 import { LadderLoading } from 'react-loadingg';
 
-function SearchResult(props) {
+function Library(props) {
     const comics = props.comics;
 
     const conmicsResult = comics.map(comic => {
-        return <ComicItem 
+        return <LibraryItem 
                     key={comic.title}
-                    title={comic.title}
+                    title={comic.titile}
                     href={comic.href}
                     thumbnail={comic.thumbnail}/>
     })
@@ -19,6 +18,7 @@ function SearchResult(props) {
     return(
         <div className="SearchResult">
             {props.loading ?<div className="Loading"> <LadderLoading size="large"/> </div> : ""}
+            <h4>My Library</h4>
             <Row
                 lg={2}>
                     {conmicsResult}
@@ -28,4 +28,4 @@ function SearchResult(props) {
     )
 }
 
-export default SearchResult;
+export default Library;

@@ -10,6 +10,7 @@ function ReadingComic(props) {
     return (
         <div className="ReadingComic">
             <div className="Content">
+                <p style={{position:"fixed", color:"#d9534f", fontWeight:"600", margin:"auto auto"}}>Choose chapter!</p>
                 {display}
             </div>
         </div>

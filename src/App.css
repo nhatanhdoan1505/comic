@@ -10,3 +10,19 @@
 ::-webkit-scrollbar {
   display: none;
 }
+ 
+.SwitchGroup{
+  display: flex;
+  width: 60px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.SearchIcon:hover{
+  cursor: pointer;
+} 
+
+.LibraryIcon{
+  cursor: pointer;
+}
