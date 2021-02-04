@@ -39,3 +39,20 @@
         justify-content: center;
     }
 }
+
+@media(max-width: 410px){
+    .SearchBox{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+}
+
+@media(max-width: 305px){
+    .SearchBox input{
+        width: 90%;
+        margin: 0 auto;
+    }
+}

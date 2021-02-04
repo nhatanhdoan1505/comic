@@ -33,9 +33,8 @@ function App() {
         .then(res => {
           setLoading(false);
           let result = res.data;
-          console.log(result); 
           if(res.data.lenght !== 0){
-            setComics(res.data);
+            setComics(result);
             setNoResult(false);
           }else{
             setComics(res.data);

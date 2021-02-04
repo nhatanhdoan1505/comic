@@ -98,3 +98,24 @@
         left: 20px;
     }
 }
+
+.ChangeButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ButtonDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ButtonDisplay:hover{
+    cursor: pointer;
+}
+
+.ButtonDisplay p {
+    margin-bottom: 0px;
+}

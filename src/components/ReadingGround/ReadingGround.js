@@ -3,7 +3,7 @@ import './ReadingGround.css';
 import Chapter from './Chapter/Chapter';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
 import ReadingComic from '../ReadingComic/ReadingComic';
 import { useEffect } from 'react';
 import axios from '../../axios/axios';
@@ -41,6 +41,46 @@ function ReadingGround(props) {
         setSelectChapter(false);
     }
 
+    const previousChapterHandler = () => {
+        if(chapterLink === ""){
+            return;
+        }
+        let index = 0;
+
+        for (let i = 0; i < chapters.length; i++){
+            if (chapters[i].href === chapterLink){
+                index = i;
+            }
+        }
+
+        if(index === 0){
+            return;
+        }
+
+        setChapterLink(chapters[index-1].href);
+        setChapterData(chapters[index-1].data);
+    }
+
+    const nextChapterHandler = () => {
+        if(chapterLink === ""){
+            return;
+        }
+        let index = 0;
+
+        for (let i = 0; i < chapters.length; i++){
+            if (chapters[i].href === chapterLink){
+                index = i;
+            }
+        }
+
+        if(index === chapters.length){
+            return;
+        }
+
+        setChapterLink(chapters[index+1].href);
+        setChapterData(chapters[index+1].data);
+    }
+
     const chaptersDisplay = chapters.map(chapter => {
         return <Chapter 
                     data={chapter.data} 
@@ -56,6 +96,16 @@ function ReadingGround(props) {
                 <div className="Toggle" onClick={selectChapterHandler}>
                     <span>{chapterData}</span>
                     <FontAwesomeIcon icon={faChevronDown} color="black"/>
+                </div>
+                <div className="ChangeButton">
+                    <div className="ButtonDisplay" style={{marginRight: "10px"}} onClick={previousChapterHandler}>
+                        <FontAwesomeIcon icon={faBackward}/>
+                        <p>Previous</p>
+                    </div>
+                    <div className="ButtonDisplay" onClick={nextChapterHandler}>
+                        <FontAwesomeIcon icon={faForward}/>
+                        <p>Next</p>
+                    </div>
                 </div>
             {selectChapter ? <div className="ToggleValue" onClick={cancelDropChapterHandler}>
                 {chaptersDisplay}

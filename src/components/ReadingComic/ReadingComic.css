@@ -53,3 +53,15 @@
         width: 99%;
     }
 }
+
+@media(max-width: 445px){
+    .ReadingComic img {
+        width: 90%;
+    }
+}
+
+@media(max-width: 375px){
+    .ReadingComic img {
+        width: 85%;
+    }
+}

@@ -19,3 +19,10 @@
     left: 55%;
     box-shadow: 0 8px 6px -6px black;
 }
+
+
+@media(max-width: 588px){
+    .row{
+        margin-top: 300px;
+    }
+}
